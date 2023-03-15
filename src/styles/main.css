@@ -1,0 +1,283 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+
+/* 
+font-family: 'DM Sans', sans-serif;
+font-family: 'Poppins', sans-serif; 
+*/
+
+/* * {
+border: 1px solid red;
+} */
+:root {
+    --blackpure: #000000;
+    --black: #171718;
+    --black-border: #26292D;
+    --white: #FFFFFF;
+    --puple: #5C62EC;
+
+
+    --darck-bg: var(--black);
+    --text-color: var(--black);
+    --darck-border: var(--black-border);
+    --header-text: var(--white);
+    --accent: var(--puple);
+
+    /* light mode */
+    --page-bg: var(--white);
+    --text-color: var(--black);
+    --title-1: var(--accent);
+    --project-card-bg: var(--white);
+    --project-card-text: var(--black);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+
+}
+
+.dark {
+
+    /* dark mode */
+
+    --page-bg: #252526;
+    --text-color: var(--white);
+    --title-1: var(--white);
+    --project-card-bg: var(--black);
+    --project-card-text: var(--white);
+    --box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.8);
+
+}
+
+html,
+body {
+    
+    min-height: 100vh;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+
+    /* light mode */
+    background-color: var(--page-bg);
+    color: var(--text-color);
+}
+
+#root{
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* general */
+
+.container {
+    padding: 0 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.none {
+    display: none !important;
+}
+
+.section,
+.section2 {
+    padding: 70px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-1 {
+    margin: 60px 0;
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--title-1);
+    line-height: 1.3;
+    text-align: center;
+}
+
+.title-2 {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+
+
+
+
+/* projects */
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+/* progect details */
+
+.project-details {
+    min-width: 865px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.project-details__cover {
+    min-width: 100%;
+    margin-bottom: 40px;
+    filter: drop-shadow(0px 5px 35px rgba(0, 0, 0, 0.25));
+    border-radius: 10px;
+
+}
+
+.project-details__desc {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.3;
+    padding: 40px 0 30px;
+}
+
+/* content list */
+.content-list {
+    margin: 0 auto;
+    min-width: 570px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 40px;
+}
+
+.content-list a {
+    color: var(--accent);
+}
+
+.content-list__item {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-list__item p+p {
+    margin-top: 0.5em;
+}
+
+
+
+@media(max-width:620px) {
+    .header {
+
+        min-height: unset;
+    }
+
+    .header__litle {
+
+        font-size: 30px;
+        padding-top: 80px;
+    }
+
+    .header__litle strong {
+
+        font-size: 40px;
+    }
+
+    .nav-row {
+        justify-content: space-between;
+    }
+
+    .dark-mode-btn {
+        order: 0;
+    }
+
+    .header {
+
+        background-image: url(./../img/6.jpg);
+    }
+
+    .section {
+        padding: 40px 0;
+
+    }
+
+    .content-list {
+        min-width: unset;
+    }
+
+    .section2 {
+        padding: 40px 0;
+        height: 100vh;
+
+    }
+
+    .title-1 {
+
+        font-size: 40px;
+        margin: 30px 0;
+    }
+
+    .title-2 {
+
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .project__title {
+
+        font-size: 20px;
+    }
+
+    .project-details {
+        min-width: unset;
+    }
+
+    .project-details__desc {
+
+        margin-bottom: 20px;
+        font-size: 22px;
+    }
+
+    .content-list {
+
+        row-gap: 20px;
+    }
+
+    .content-list__item {
+
+        font-size: 16px;
+    }
+
+
+    .project-details__cover {
+        max-width: 45%;
+    }
+
+
+    .footer {
+
+        padding: 40px 0 30px;
+        position: sticky !important;
+    }
+
+    .footer__wraper {
+
+        row-gap: 20px;
+    }
+
+    .social {
+
+        column-gap: 20px;
+    }
+
+    .social__item {
+
+        width: 20px;
+    }
+
+}
